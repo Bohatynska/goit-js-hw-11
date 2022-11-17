@@ -11,10 +11,12 @@ refs.formRef.addEventListener('submit', onSubmitForm);
 refs.loadMoreBtnRef.addEventListener('click', onLoadMore);
 
 const apiService = new ApiService();
+// console.log(apiService);
 function onSubmitForm(e) {
   e.preventDefault();
   apiService.query = e.currentTarget.elements.query.value;
   apiService.fetchGallely(searchQuery);
+  apiService.resetPage();
 }
 function onLoadMore() {
   apiService.fetchGallely(searchQuery);
