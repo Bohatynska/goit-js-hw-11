@@ -1,45 +1,59 @@
-* {
-  box-sizing: border-box;
+.body {
+  background-color: rgb(226, 229, 231);
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa72;
-  color: #212121;
-  line-height: 1.5;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-#search-box {
+.search-form {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
-  margin-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.load-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.is-hidden {
+  display: none;
+}
+.gallery {
+  margin-left: 90px;
+  display: grid;
+  grid-template-columns:
+    calc((100%-30) / 4) calc((100%-30) / 4) calc((100%-30) / 4)
+    calc((100%-30) / 4);
+  gap: 10px;
 }
 
-.country-card__list {
-  margin-left: 15px;
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  font-weight: 400;
+  color: rgb(44, 44, 44);
 }
-.country-card {
-  margin-left: 15px;
+.info-item {
+  margin: 5px 0 0;
 }
-.card-item_text {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1.17;
-  margin-left: 5px;
-  margin-bottom: 15px;
-  letter-spacing: 0.03em;
-  text-align: left;
+
+.photo-card {
+  width: 300px;
+  height: 380px;
+  object-fit: cover;
 }
-.accent-card {
-  font-weight: bold;
-  font-size: 18px;
+
+.button.is-hidden {
+  display: none;
+}
+
+.button {
+  font: inherit;
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
